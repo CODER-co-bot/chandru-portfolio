@@ -1,0 +1,18 @@
+p1{
+    color: white;
+}
+.social-icons{
+    display:flex;
+    justify-content:flex-end;
+    gap:20px;
+    margin-top:20px;
+}
+
+.social-icons a{
+    color:white;
+    text-decoration:none;
+}
+
+.social-icons i{
+    margin-right:5px;
+}

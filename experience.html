@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<title>About Me - Chandru Portfolio</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: white;
+    
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#1e293b;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+.menu-icon{
+    font-size:30px;
+    cursor:pointer;
+    color:white;
+}
+
+/* Side Menu */
+.sidebar{
+    position:fixed;
+    top:0;
+    left:-250px;
+    width:250px;
+    height:100%;
+    background:#1b5568;
+    transition:0.4s;
+    padding-top:80px;
+    z-index:1000;
+}
+
+.sidebar a{
+    display:block;
+    padding:15px 25px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:#42b7cb;
+}
+.section-title{
+    font-size:35px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h2{
+    color:rgb(30, 214, 243);
+    text-align:center;
+    text-decoration: bold;
+    margin-bottom:40px;
+}
+h3{
+    color:rgb(30, 214, 243);
+    text-align:left;
+    text-decoration: bold;
+    margin-bottom:20px;
+}
+p{
+    color:black
+}
+html {
+    scroll-behavior: smooth;
+}
+footer{
+    background:#1e293b;
+    color:white;
+    padding:20px;
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="logo">CHANDRU</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+<nav>
+<div class="sidebar" id="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="education.html">Education</a>
+    <a href="projects.html">Projects</a>
+    <a href="certificate.html">Certificates</a>
+    <a href="experience.html">Experience</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="hobbies.html">Skills</a>
+    <a href="#contact">Contact</a>
+    
+</div>
+</nav>
+
+<section id="experience">
+    <h2>EXPERIENCE</h2>
+<div>
+    <h3>Web Developer Intern - InAmigos Foundation</h3>
+    <p>07 June 2026 - 20 June 2026<br></p>
+    <p>Worked on developing a web application using HTML, CSS, Javascript. Implemented new features and fixed bugs to improve user experience.</p>
+    <p><br><br></p>
+</div>
+<div>
+        <h3>Context Developer - ShineInfoTech</h3>
+        <p>September 2025 - October 2025<br><br></p>
+        
+ </div>
+</section>
+<script>
+function toggleMenu() {
+    let sidebar = document.getElementById("sidebar");
+
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+    } else {
+        sidebar.style.left = "0px";
+    }
+}
+
+const sidebar = document.getElementById("sidebar");
+
+// Close when mouse leaves
+sidebar.addEventListener("mouseleave", () => {
+    sidebar.style.left = "-250px";
+});
+
+// Close when clicking outside
+document.addEventListener("click", function(event) {
+
+    const menuIcon = document.querySelector(".menu-icon");
+
+    if (
+        !sidebar.contains(event.target) &&
+        !menuIcon.contains(event.target)
+    ) {
+        sidebar.style.left = "-250px";
+    }
+});
+</script>
+<footer>
+  <section id="contact">
+    <h2>CONTACT</h2>              
+<p1>Email: chandrum0026@gmail.com<br></p1>
+<p1>Phone: +91 86674 54144</p1>
+</section>                 
+ <div class="social-icons">
+
+    
+
+    <a href="#">
+        <i class="fab fa-linkedin"></i>
+     chandru-m-30b198217    
+     </a>
+
+    
+            </footer>
+</body>
+</html>

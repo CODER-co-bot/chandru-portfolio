@@ -1,0 +1,153 @@
+{
+  "name": "Chandru",
+
+  "sex": "Male",
+
+  "about": "Chandru is a BBA student and also AI-focused developer with hands-on experience building Natural Language Processing (NLP) and Generative AI applications, including Retrieval-Augmented Generation (RAG) based document question-answering systems, intent-driven chatbots, and sentiment analysis models. Proficient in Python, prompt engineering, embeddings-based retrieval workflows, and AI application integration. Experienced in designing intelligent systems that leverage NLP techniques to improve user interaction and information retrieval.Passionate about applying AI to solve real-world problems and continuously expanding knowledge in machine learning, deep learning, and Large Language Models (LLMs). Seeking an AI/ML internship or entry-level opportunity to contribute to innovative products, collaborate with engineering teams, and gain hands-on experience in building scalable AI-powered solutions within startup and technology-driven environments.",
+
+  "Email": "chandrum0026@gmail.com",
+
+  "LinkedIn": "chandru-m-30b198217",
+
+  "education": [
+    {
+      "degree": "Bachelor of Business Administration (BBA)",
+      "status": "completed at Swami Dayananda College of arts and science, Manjakkudi. at june 2025"
+    },
+    {
+      "degree": "HDCA",
+      "description": "Honours Diploma in Computer Application(HDCA)",
+       "status": "completed at Computer Software College(CSC), kumbakonam. at October 2023"
+    }
+    
+
+  ],
+
+  "skills": [
+    "Python",
+    "AI Engineering",
+    "NLP",
+    "Machine Learning",
+    "Data Analysis",
+    "Prompt Engineering",
+    "AI Application Development",
+    "Web Development",
+    "C",
+    "c++",
+    "MySQL",
+    "HTML",
+    "CSS",
+    "MS Office"
+  ],
+
+  "projects": [
+    {
+      "name": "Personal Portfolio Website",
+      "description": "Developed a professional portfolio website with an AI-powered assistant, showcasing projects, technical skills, certifications, achievements, and educational background using HTML, CSS, JavaScript, json and Python."
+    },
+    {
+      "name": "Analyti.AI",
+      "description": "AI-Powered Semantic Search Engine (Concept & Architecture Design - In Progress)"
+    },
+    {
+      "name": "Red Ocean and Blue Ocean Strategy Research",
+      "description": "Researched Red Ocean and Blue Ocean business strategies in Kumbakonam using data collection, cleaning, analysis, and visualization techniques. Presented findings through charts, tables, and strategic insights."
+    },
+    {
+      "name": "AI-Powered Chatbot",
+      "description": "Designed and implemented an AI-powered chatbot using Python and NLP techniques to provide intelligent responses and enhance user interaction."
+    },
+    {
+      "name": "Sentiment Analysis Model",
+      "description": "Built a sentiment analysis model using machine learning algorithms to classify text data into positive, negative, or neutral sentiments."
+    },
+    {
+      "name": "Document Question-Answering System",
+      "description": "Developed a Retrieval-Augmented Generation (RAG) based document question-answering system that retrieves relevant information from a knowledge base and generates accurate responses to user queries."
+    },
+    {
+      "name": "Web Development Projects",
+      "description": "Created multiple web development projects using HTML, CSS, JavaScript, and Python to build interactive and responsive websites."
+    },
+    {
+        "name": "Craww",
+        "description" : "Created a responsive event website platform handling UI flow, structure, and backend logic."
+    },
+    {
+        "name": " Whispers of the Hidden Prince",
+        "description": "AI Prompt Engineering Story System. Designed structured prompts to control tone, narrative flow, and consistency in AI-generated storytelling."
+    }
+  ],
+
+  "stories": [
+    {
+      "name": "Atomic Warrior",
+      "description": "A science-fiction story about an atomic-powered warrior protecting humanity."
+    },
+    {
+      "name": "King of Coredense",
+      "description": "A sci-fi adventure involving a powerful invention, zombies, time travel, and changing history."
+    }
+  ],
+
+  "certificates": [
+    "AI Engineering Path",
+    "AI Engineering Basic",
+    "Machine Learning",
+    "Prompt Engineering",
+    "Advanced Prompt Engineering Techniques",
+    "HDCA",
+    "C, C++",
+    "Python",
+    "MySQL",
+    "Python for AI",
+    "Web Development",
+    "R Programming"
+
+  ],
+
+  "achievements": [
+    "Participated in inter-college competitions",
+    "Completed AI Engineering learning path",
+    "Built multiple AI and web development projects"
+  ],
+  "Inter-college competitions":[
+   {
+       "Event" : "Data Classification",
+       "description": "Winner"
+   },
+   {
+    "Event":"Connection",
+    "description":"Third Place"
+   },
+   {
+    "Event":"Hackaton",
+    "description":"Cancelled Event"
+   },
+   {
+    "Event":"Stock War",
+    "description":"Participated"
+   },
+   {
+    "Event":"Clue Hunter",
+    "description":"Participated"
+   }
+  ],
+ 
+  "experience": [
+    {
+        "role": "Web Developer Intern",
+        "company": "InAmigos Foundation",
+        "description": "Worked on developing a web application using HTML, CSS, Javascript. Implemented new features and fixed bugs to improve user experience.",
+        "performer": "Top 5 performer in task 1, Top 3 performer in task 2, compared to 100 interns",
+        "from-to": "07 June 2026 - 20 June 2026"
+
+    },
+    {
+        "role": "Context Developer ",
+        "company": "ShineInfoTech",
+        "from-to": "September 2025 - October 2025"
+
+    }
+  ]
+}

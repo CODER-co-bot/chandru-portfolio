@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandru AI Assistant</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.chat-container{
+    width:35%;
+    height:80vh;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.chat-header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.chat-header h2{
+    margin-bottom:5px;
+}
+
+.chat-header p{
+    font-size:14px;
+}
+
+.chat-messages{
+    height:65%;
+    padding:20px;
+    overflow-y:auto;
+    background:#f8fafc;
+}
+
+.message{
+    margin-bottom:15px;
+    padding:12px;
+    border-radius:10px;
+}
+
+.bot{
+    background:#dbeafe;
+}
+
+.user{
+    background:#bfdbfe;
+    text-align:right;
+}
+
+.chat-input{
+    display:flex;
+    padding:15px;
+    border-top:1px solid #ddd;
+    background:white;
+}
+
+.chat-input input{
+    flex:1;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    outline:none;
+}
+
+.chat-input button{
+    margin-left:10px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+.chat-input button:hover{
+    background:#1d4ed8;
+}
+.close-btn{
+    float:right;
+    background:none;
+    border:none;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+@media(max-width:900px){
+
+    .chat-container{
+        width:90%;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="chat-container">
+
+     <button class="close-btn" onclick="closeChatbot()">✖</button>
+    <div class="chat-header">
+        <h2>🤖 Chandru AI Assistant</h2>
+        <p>Ask me about Chandru's skills, projects, education, and achievements.</p>
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+
+        <div class="message bot">
+            Hello! I'm Chandru's AI Assistant. How can I help you today?
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Ask something about Chandru..."
+        >
+
+        <button onclick="sendMessage()">
+    Send
+</button>
+
+    </div>
+
+</div>
+<script>
+
+async function sendMessage() {
+
+    let input = document.getElementById("userInput");
+    let message = input.value.trim();
+
+    if(message === "") return;
+
+    let chatMessages = document.getElementById("chatMessages");
+
+    // User Message
+    chatMessages.innerHTML += `
+        <div class="message user">
+            ${message}
+        </div>
+    `;
+
+    input.value = "";
+
+    // Typing Message
+    chatMessages.innerHTML += `
+        <div class="message bot" id="typing">
+            Thinking...
+        </div>
+    `;
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    try {
+
+        const response = await fetch(
+            "http://127.0.0.1:5000/chat",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    message: message
+                })
+            }
+        );
+
+        const data = await response.json();
+
+        document.getElementById("typing").remove();
+
+        chatMessages.innerHTML += `
+            <div class="message bot">
+                ${data.reply}
+            </div>
+        `;
+
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    } catch(error){
+
+        document.getElementById("typing").remove();
+
+        chatMessages.innerHTML += `
+            <div class="message bot">
+                Unable to connect to AI Assistant.
+            </div>
+        `;
+    }
+}
+
+function closeChatbot(){
+
+    window.location.href = "index.html";
+
+}
+
+document.getElementById("userInput")
+.addEventListener("keypress", function(event){
+
+    if(event.key === "Enter"){
+        sendMessage();
+    }
+
+});
+
+</script>
+</body>
+</html>
