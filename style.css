@@ -16,3 +16,35 @@ p1{
 .social-icons i{
     margin-right:5px;
 }
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 220px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
